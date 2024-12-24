@@ -23,7 +23,9 @@ The `Dockerfile` includes the following steps:
 
 .
 ├── Dockerfile            # Docker configuration file
+
 ├── package.json          # Node.js dependencies
+
 ├── app.js                # Main application file
 
 

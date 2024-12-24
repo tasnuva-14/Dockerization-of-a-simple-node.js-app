@@ -21,7 +21,7 @@ The `Dockerfile` includes the following steps:
 
 ## Application Structure
 
-.
+
 ├── Dockerfile            # Docker configuration file
 
 ├── package.json          # Node.js dependencies
@@ -31,22 +31,28 @@ The `Dockerfile` includes the following steps:
 
 ### dockerfile
 
+# Using a base image
+
 FROM node:16
 
 # Create app directory
+
 WORKDIR /app
 
 # Install dependencies
 
 RUN npm install
 
-# Copy the rest of the application code
+# Copy the the application code and files
+
 COPY . .
 
 # Expose application port
+
 EXPOSE 3000
 
 # Start the application
+
 CMD ["npm", "start"]
 
 
@@ -65,6 +71,18 @@ docker run -d -p 3001:3000 node-app
 Open your browser and navigate to:
 
 http://localhost:3001
+
+
+![Preview of the Node.js App](local.PNG)
+
+
+
+### We can also check the connectivity through 'curl' command in terminal
+
+curl http://localhost:3001
+
+
+![Preview of the Node.js App](term.PNG)
 
 
 
